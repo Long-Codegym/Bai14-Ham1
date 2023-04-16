@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><b style="font-size: 30px">Fahrenheit:</b>
+    <input style="height: 30px" id="doam" type="number"
+           oninput="chuyennhietdo(this.value)"
+           onchange="chuyennhietdo(this.value)"><br></label><br>
+<b style="font-size: 20px">Celsius:</b> <span id="hienthi"></span>
+</body>
+</html>
+
+<script>
+    function chuyennhietdo(f) {
+        f = parseFloat(f);
+        document.getElementById("hienthi").innerHTML = (f - 32) / 1.8;
+    }
+</script>
